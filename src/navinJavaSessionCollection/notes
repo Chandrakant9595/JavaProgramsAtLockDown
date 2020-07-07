@@ -1,0 +1,8 @@
+collection - it a framework, used/provide to store and manipulate the group of objects.
+Operation perform - searching, inserting, manipulation, deletion, sorting,  
+
+interface : set, list, queue, deque
+classes: ArrayList, Vector, LinkList, HeshSet, TreeSet, PriorityQueue, 
+
+follow the diagram always. 
+                             
