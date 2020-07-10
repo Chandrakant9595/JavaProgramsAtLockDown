@@ -2,6 +2,7 @@ package navinJavaSessionCollection;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.ListIterator;
 
 public class ArrayListExample {
 
@@ -83,6 +84,84 @@ public class ArrayListExample {
 		
 		
 		
+		
+		
+		
+		
+		// iterating ArrayList
+		ArrayList<String> ar5 = new ArrayList<String>(); //generic arraylist
+		ar5.add("ABC");
+		ar5.add("XYZ");
+		ar5.add("PQR");
+		ar5.add("LMN");
+		
+		// 1. using java 8 with for each loop and lambda expression
+		System.out.println("1. using java 8 with for each loop and lambda expression");
+		
+		ar5.forEach(val -> {
+			System.out.println(val);
+		});
+		System.out.println("-----------------------------");
+		
+		// 2. Iterator using
+		System.out.println("Using iterator");
+		
+		Iterator<String> itr5 = ar5.iterator();
+		while(itr5.hasNext()) {
+			System.out.println(itr5.next());
+		}
+		System.out.println("-----------------------------");
+		
+		// 3. using iterator and java 8 forEachRemaining method
+		System.out.println("3. using iterator and java 8 forEachRemaining method");
+		
+		Iterator<String> it5 = ar5.iterator();
+		it5.forEachRemaining(val ->{
+			System.out.println(val);
+		});
+		
+		System.out.println("-----------------------------");
+		
+		
+		// 4. using  for each loop 
+		System.out.println("4. using  for each loop");
+		
+		for(String val:ar5) {
+			System.out.println(val);
+		}
+		
+		System.out.println("-----------------------------");
+		
+		
+		// 5. using for loop with order/index  
+		System.out.println("5. using for loop with order/index");
+				
+		for(int i=0; i<ar5.size(); i++) {
+			System.out.println(ar5.get(i));
+		}
+				
+		System.out.println("-----------------------------");
+		
+		
+		// 6.1. using ListIterator with reverse order  
+		System.out.println("6.1. using ListIterator with reverse order");
+		
+		ListIterator<String> listAR5 = ar5.listIterator(ar5.size());
+		while(listAR5.hasPrevious()) {
+			String val =listAR5.previous();
+			System.out.println(val);
+		}
+		System.out.println("-----------------------------");
+		
+		// 6.2. using ListIterator with order  
+		System.out.println("6.2. using ListIterator with order");
+		
+		while(listAR5.hasNext()) {
+			String val =listAR5.next();
+			System.out.println(val);
+		}
+		
+		System.out.println("-----------------------------");
 	}
 
 	
